@@ -1,0 +1,2 @@
+\ECH\PhpCIPlugins\XdebugCoverageExtractPlugin:
+    path: "coverage.html"

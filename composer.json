@@ -1,0 +1,24 @@
+{
+    "name": "tomasstrejcek/PHPCI-XdebugCoverageExtractPlugin",
+    "description": "Plugin for PHPCI",
+    "authors": [
+        {
+            "name": "tomas.strejcek",
+            "email": "tomas.strejcek@ecommerceholding.cz"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "phpci": {
+            "pluginNamespace": "ECH\\PhpCIPlugins\\",
+            "suppliedPlugins": [
+                {"name": "XdebugCoverageExtract", "class": "XdebugCoverageExtractPlugin"}
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "ECH\\PhpCIPlugins\\": ""
+        }
+    }
+}
