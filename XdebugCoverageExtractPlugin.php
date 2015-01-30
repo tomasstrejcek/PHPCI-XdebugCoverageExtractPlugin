@@ -45,8 +45,9 @@ class XdebugCoverageExtractPlugin implements Plugin {
         chdir($this->phpci->buildPath);
         if(file_exists($this->path)) {
             $file = file_get_contents($this->path);
-            $content = preg_match('<h1>[^<>]*</h1>', $file);
-            $this->phpci->log(str_replace('&nbsp;', '', $content));
+            $a = array();
+            $content = preg_match('/<h1>(.*?)<\/h1>/', $file, $a);
+            $this->phpci->log(str_replace('&nbsp;', '', $a[1]));
         }
 
         return true;

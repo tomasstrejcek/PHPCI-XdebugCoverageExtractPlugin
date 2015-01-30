@@ -1,5 +1,5 @@
 {
-    "name": "tomasstrejcek/phpci-dexbug-coverage-extract-plugin",
+    "name": "tomasstrejcek/phpci-xdebug-coverage-extract-plugin",
     "description": "Plugin for PHPCI",
     "authors": [
         {
