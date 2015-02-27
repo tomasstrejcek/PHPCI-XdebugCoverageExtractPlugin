@@ -42,13 +42,18 @@ class XdebugCoverageExtractPlugin implements Plugin {
      */
     public function execute()
     {
+
+        $curdir = getcwd();
         chdir($this->phpci->buildPath);
+        
         if(file_exists($this->path)) {
             $file = file_get_contents($this->path);
             $a = array();
             $content = preg_match('/<h1>(.*?)<\/h1>/', $file, $a);
             $this->phpci->log(str_replace('&nbsp;', '', $a[1]));
-        }
+        } 
+	
+	chdir($curdir);
 
         return true;
     }
